@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 16, 2022, 12:35:36 AM
+    Author     : DELL 7510
+*/
+.head1{
+    height: 40px;
+    background-color: #cccccc;
+    margin-top: 40px;
+}
+#name{
+    height: 30px;
+    width: 200px;
+    background-color: white;
+    margin-left: 650px;
+    text-align: center;
+
+}
+.profile{
+    height: 40px;
+    width: 39px;
+    padding-left: 200px;
+    margin-top: -300px;
+   
+}
+.lol{
+    height: 200px;
+    width: 200px;
+}

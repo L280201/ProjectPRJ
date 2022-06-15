@@ -4,12 +4,14 @@
  */
 package Controller;
 
+import dal.AccountDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.Account;
 
 /**
  *
@@ -59,18 +61,15 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-
-        String user1 = request.getParameter("user1");
-        String password1 = request.getParameter("pass1");
-
-        String user = getServletContext().getInitParameter("user");
-        String password = getServletContext().getInitParameter("pass");
-
-        if (user1.equals(user) && password1.equals(password)) {
-            response.getWriter().println("Login sucessful");
+        String user = request.getParameter("username");
+        String pass = request.getParameter("password");
+        AccountDBContext db = new AccountDBContext();
+        Account acc = db.getAccount(user, pass);
+        if (acc != null) {
+//            response.getWriter().println("Chao "+ acc.getDisplayName());
+            request.getRequestDispatcher("Home.jsp").forward(request, response);
         } else {
-            response.getWriter().println("Login fail");
+            response.getWriter().println("Password Sai");
         }
 
     }

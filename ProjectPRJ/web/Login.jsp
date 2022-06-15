@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/login.css">
@@ -17,8 +17,8 @@
         <form action="LoginController" method="POST">
             <div class="box-login">
                 <div id="heading"><a>Student Login</a> <br/></div>
-                <input id="user" type="text" name="user1"> <br/>
-                <input id="pass" type="password" name="pass1"> <br/>
+                <input id="user" type="text" name="username" placeholder="UserName"> <br/>
+                <input id="pass" type="password" name="password" placeholder="Passwword"> <br/>
                 <input id="login" type="submit" value="Login">
             </div>
         </form>
